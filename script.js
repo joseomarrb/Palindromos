@@ -17,5 +17,15 @@ function palindromo() {
         return;
     }
 
-    inputConvertido === inputOriginal ?  result.textContent =`${inputSinTocar} is a palindrome` : result.textContent = `${inputSinTocar} is not a palindrome`;
+    if (inputConvertido === inputOriginal) {
+        result.textContent =`${inputSinTocar} is a palindrome`;
+        result.classList.remove("not-palindrome")
+        result.classList.add("is-palindrome")
+    } else {
+        result.textContent = `${inputSinTocar} is not a palindrome`;
+        result.classList.remove("is-palindrome")
+        result.classList.add("not-palindrome")
+    }
+
+    // inputConvertido === inputOriginal ?  result.textContent =`${inputSinTocar} is a palindrome` : result.textContent = `${inputSinTocar} is not a palindrome`;
 }
